@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;1,100;1,300&family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #011e38;
+    font-family: 'Poppins', sans-serif;
+}
+#Myarrow, #Myarrow2{
+    transition: 0.5s;
+}
+
+/* ============= HEADER SECTION ============ */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 120px;
+    gap: 20px;
+}
+.container a{
+    text-decoration: none;
+}
+.container header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+.container header .title{
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #626ee4;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 0 0 3px 3px;
+}
+.container header .left-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container header .left-section ul{
+    list-style: none;
+    margin-left: 20px;
+}
+.container header .left-section ul li{
+    display: inline-block;
+}
+.container header .left-section ul li a{
+    color: #fff;
+    background-color: #16314c;
+    padding: 10px 20px;
+    border-radius: 0 0 3px 3px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.font-item{
+    position: relative;
+    transform: 0.5s;
+    transform-origin: top;
+}
+.font-item .sub-menu{
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    right: 0px;
+    display: none;
+    transform: 0.5s;
+    transform-origin: top;
+}
+.font-item .sub-menu.opened{
+    display: block;
+}
+.font-item .sub-menu li{
+    width: 100%;
+    margin-top: 5px;
+    transform: 0.5s;
+    transform-origin: top;
+}
+.font-size-item{
+    position: relative;
+    transform: 0.5s;
+    transform-origin: top;
+}
+.font-size-item .size-sub-menu{
+    position: absolute;
+    margin-top: 5px;
+    width: 100%;
+    right: 0px;
+    display: none;
+    transform: 0.5s;
+    transform-origin: top;
+}
+.font-size-item .size-sub-menu.opened{
+    display: block;
+}
+.font-size-item .size-sub-menu li{
+    width: 100%;
+    margin-top: 5px;
+    transform: 0.5s;
+    transform-origin: top;
+}
+.container header .left-section ul li a:hover{
+    background-color: #626ee4;
+}
+.ri-arrow-down-s-line{
+    margin-left: 5px;
+}
+.container header .btn{
+    border: none;
+    outline: none;
+    padding: 10px 24px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.container header .browse-btn{
+    background-color: #ea3266;
+}
+.container header .browse-btn:hover{
+    background-color: #bb1846;
+}
+
+/* ============= CODE SECTION ============ */
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.code-editor{
+    width: 100%;
+    height: 500px;
+    background-color: #001528;
+    border-radius: 0px 5px 5px 5px;
+    position: relative;
+    margin-top: 40px;
+}
+.code-editor textarea{
+    width: 100%;
+    resize: none;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: inherit;
+    color: #fff;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-left: 40px;
+    line-height: 1.4rem;
+}
+.code-editor::before{
+    content: 'editor';
+    position: absolute;
+    top: -43px;
+    left: 0;
+    color: #fff;
+    background-color: #626ee4;
+    padding: 10px 20px;
+    font-weight: 400;
+    border-radius: 3px 3px 0 0;
+    z-index: 99;
+    box-shadow: 0 3px 10px 0 #000000;
+}
+.container form .buttons{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.container form .buttons input{
+    border: none;
+    outline: none;
+    padding: 10px 24px;
+    border-radius: 5px;
+    background-color: #11b43a;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container form .buttons input:hover{
+    background-color: #039227;
+}
+.container form .buttons #parseBtn{
+    background-color: #2b42dc;
+}
+.container form .buttons #parseBtn:hover{
+    background-color: #172fc7;
+}
+
+/* ========= OUTPUTS ======== */
+.container .outputs{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container .outputs .output-screen{
+    width: 47%;
+    height: 400px;
+    padding: 20px;
+    color: #fff;
+    background-color: #001528;
+    border-radius: 5px;
+    font-size: 16px;
+    overflow-y: auto;
+}
+.output-screen .token{
+    color: #23e07e;
+}
+.output-screen .error{
+    color: #fd0831;
+}
+.output-screen .tokenName{
+    color: #f2c469;
+}
+.output-screen .lineColor{
+    color: #557aff;
+}
+
+/*=============== FOOTER ===============*/
+.footer{
+    margin-bottom: -50px;
+    margin-top: 30px;
+    width: 120%;
+    background-color: #17439a;
+    text-align: center;
+    padding :10px;
+}
+.footer h4{
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+/*=============== SCROLL BAR  CUSTOMIZATION ===============*/
+body::-webkit-scrollbar {
+    height: 100%;
+    display: none;
+    transition: 0.3s;
+}
+body::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+    color: #fff;
+    display: block;
+}
+body::-webkit-scrollbar-track {
+   background-color: #000b21;
+}
+body::-webkit-scrollbar-thumb {
+    box-shadow: inset 12px 12px 6px #626ee4;
+}
+
+textarea::-webkit-scrollbar {
+    height: 100%;
+    display: none;
+    transition: 0.3s;
+}
+textarea::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+    color: #fff;
+    display: block;
+}
+textarea::-webkit-scrollbar-track {
+   background-color: #000b21;
+}
+textarea::-webkit-scrollbar-thumb {
+    box-shadow: inset 12px 12px 6px #626ee4;
+}
+
+.output-screen::-webkit-scrollbar {
+    height: 100%;
+    display: none;
+    transition: 0.3s;
+}
+.output-screen::-webkit-scrollbar {
+    display: block;
+    width: 10px;
+    color: #fff;
+    display: block;
+}
+.output-screen::-webkit-scrollbar-track {
+   background-color: #000b21;
+}
+.output-screen::-webkit-scrollbar-thumb {
+    box-shadow: inset 12px 12px 6px #626ee4;
+}
